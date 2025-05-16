@@ -1,6 +1,46 @@
-const HomePage = ()=>{
-    return(
-        <h1 className="bg-blue-950 text-blue-500">This is Home page.</h1>
-    )
+import axios from "axios"
+import Card from "../components/Card"
+import Navbar from "../components/Navbar"
+import { useEffect } from "react"
+
+const HomePage = () => {
+  const fetchBooks = async () => {
+    const response = await axios.get("http://localhost:3000/api/books")
+    console.log(response)
+  }
+
+  useEffect(() => {
+    fetchBooks()
+  }, [])
+  return (
+    <>
+      <Navbar />
+      <div className="flex flex-wrap">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+
+    </>
+  )
 }
 export default HomePage

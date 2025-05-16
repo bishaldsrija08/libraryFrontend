@@ -8,11 +8,11 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/home" element ={<HomePage/>}/>
-export default SinglePage
-                <Route path="/single" element ={<SinglePage/>}/>
-                <Route path="/edit" element ={<EditPage/>}/>
-                <Route path="/create" element ={<CreatePage/>}/>
+                <Route path="/" element={<HomePage />} />
+                export default SinglePage
+                <Route path="/single" element={<SinglePage />} />
+                <Route path="/edit" element={<EditPage />} />
+                <Route path="/create" element={<CreatePage />} />
             </Routes>
         </BrowserRouter>
     )
