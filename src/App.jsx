@@ -10,7 +10,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 export default SinglePage
-                <Route path="/single" element={<SinglePage />} />
+                <Route path="/single/:id" element={<SinglePage />} />
                 <Route path="/edit" element={<EditPage />} />
                 <Route path="/create" element={<CreatePage />} />
             </Routes>
