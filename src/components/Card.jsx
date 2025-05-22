@@ -5,22 +5,24 @@ const Card = ({singleBook}) => {
   return (
 <>
 <Link to={`/single/${singleBook.id}`}>
-<div className="flex px-3 py-3">
-  <div className="max-w-sm rounded overflow-hidden shadow-lg">
-    <div className="px-6 py-4">
-      <div className="font-bold text-xl mb-2">{singleBook.bookName}</div>
-      <p className="text-gray-700 text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
-        perferendis eaque, exercitationem praesentium nihil.
-      </p>
+    <div className="flex justify-center px-4 py-6">
+      <div className="max-w-sm w-full bg-white rounded-2xl shadow-md overflow-hidden">
+        <div className="px-6 py-4">
+          <div className="font-bold text-2xl text-gray-800 mb-2">{singleBook.bookName}</div>
+        </div>
+        <div className="px-6 py-4 space-y-2 sm:space-y-0 sm:flex sm:flex-wrap sm:gap-2">
+          <span className="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold">
+            Genre: {singleBook.bookGenre}
+          </span>
+          <span className="inline-block bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm font-semibold">
+            Author: {singleBook.bookAuthor}
+          </span>
+          <span className="inline-block bg-yellow-100 text-yellow-800 rounded-full px-3 py-1 text-sm font-semibold">
+            Price: ${singleBook.bookPrice}
+          </span>
+        </div>
+      </div>
     </div>
-    <div className="px-6 py-4">
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Genre: {singleBook.bookGenre}</span>
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Author: {singleBook.bookAuthor}</span>
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Price: {singleBook.bookPrice}</span>
-    </div>
-  </div>
-</div>
 </Link>
 </>
   )
