@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Form from "../components/Form"
 import Navbar from "../components/Navbar"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -21,15 +20,12 @@ const CreatePage = () => {
         })
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        createBook(formData)
-    }
-
-const createBook = (formData) => {
+const createBook = (e) => {
+    e.preventDefault();
   axios
     .post('http://localhost:3000/api/books', formData)
     .then(() => {
+        alert("Book Created Successfully!")
       navigate("/")
     })
     .catch((err) => {
@@ -41,7 +37,7 @@ const createBook = (formData) => {
         <>
             <Navbar />
             <div className="max-w-xl mx-auto p-6 sm:p-8">
-                <form onSubmit={handleSubmit} className="bg-white shadow-lg rounded-2xl p-6 space-y-6">
+                <form onSubmit={createBook} className="bg-white shadow-lg rounded-2xl p-6 space-y-6">
                     <h2 className="text-2xl font-bold text-gray-800">Create New Book</h2>
 
                     <div>

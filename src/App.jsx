@@ -11,7 +11,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 export default SinglePage
                 <Route path="/single/:id" element={<SinglePage />} />
-                <Route path="/edit" element={<EditPage />} />
+                <Route path="/edit/:id" element={<EditPage />} />
                 <Route path="/create" element={<CreatePage />} />
             </Routes>
         </BrowserRouter>

@@ -19,7 +19,6 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600">
             <Link to="/" className="hover:text-teal-600 transition">Home</Link>
             <Link to="/create" className="hover:text-teal-600 transition">Create</Link>
-            <Link to="/edit" className="hover:text-teal-600 transition">Edit</Link>
           </nav>
 
           {/* Mobile Menu Button */}
